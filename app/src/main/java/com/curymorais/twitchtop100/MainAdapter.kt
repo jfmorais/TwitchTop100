@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.curymorais.twitchtop100.data.domain.Game
 import com.curymorais.twitchtop100.data.domain.GameDetail
+import com.squareup.picasso.Picasso
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_row_game.*
 
@@ -30,6 +31,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.GameHolder>() {
 
     class GameHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun bind(gameDetail: GameDetail){
+            Picasso.get().load(gameDetail.boxImages.large).into(game_image)
             game_name.text = gameDetail.name
             game_description.text =  gameDetail.popularity.toString()
         }

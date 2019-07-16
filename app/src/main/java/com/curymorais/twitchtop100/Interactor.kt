@@ -14,9 +14,6 @@ class Interactor : Contract.BaseInteractor {
         call.enqueue(object: Callback<TopGames> {
             override fun onResponse(call: Call<TopGames>, response: Response<TopGames>) {
                 onFinishedListener.onSuccess(response.body()?.games)
-                for (game in response.body()!!.games!!){
-                    Log.i("CURY",game.gameDetail.name)
-                }
             }
 
             override fun onFailure(call: Call<TopGames>, t: Throwable) {

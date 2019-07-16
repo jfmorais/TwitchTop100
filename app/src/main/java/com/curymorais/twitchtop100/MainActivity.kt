@@ -8,22 +8,20 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), Contract.BaseView {
 
-
     lateinit var presenter : Contract.BasePresenter
     lateinit var adapter: MainAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         adapter = MainAdapter()
         game_list.adapter = adapter
         game_list.setHasFixedSize(true)
-        game_list.setLayoutManager( LinearLayoutManager(this));
+        game_list.layoutManager = LinearLayoutManager(this)
+
         presenter = Presenter(this, Interactor())
         updateData()
-
-
-
     }
 
     override fun initComponents() {
