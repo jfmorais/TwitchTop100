@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+androidExtensions {
+    experimental = true
+}
 
 android {
     compileSdkVersion 28
@@ -18,8 +21,10 @@ android {
     buildTypes {
         debug {
             buildConfigField "String", "BASE_URL", "\"https://api.twitch.tv/kraken/\""
+//            buildConfigField "String", "API_KEY", "mz5yy4jgtkvvhuh8almyjzctsjgyyp"
         }
         release {
+//            buildConfigField "String", "API_KEY", "mz5yy4jgtkvvhuh8almyjzctsjgyyp"
             buildConfigField "String", "BASE_URL", "\"https://api.twitch.tv/kraken/\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

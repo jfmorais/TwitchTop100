@@ -8,12 +8,12 @@
 
 
     <ImageView
-            android:id="@+id/itemImage"
+            android:id="@+id/game_image"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
-            app:layout_constraintBottom_toTopOf="@+id/itemName"
+            app:layout_constraintBottom_toTopOf="@+id/game_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -21,21 +21,21 @@
             app:layout_constraintVertical_bias="0.74" />
 
     <TextView
-            android:id="@+id/itemName"
+            android:id="@+id/game_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="top|start"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@+id/itemDescription"
+            app:layout_constraintBottom_toTopOf="@+id/game_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemImage"
+            app:layout_constraintTop_toBottomOf="@+id/game_image"
             tools:text="Some name" />
 
     <TextView
-            android:id="@+id/itemDescription"
+            android:id="@+id/game_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -47,6 +47,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemName" />
+            app:layout_constraintTop_toBottomOf="@+id/game_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

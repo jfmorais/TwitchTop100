@@ -34,7 +34,7 @@ class Presenter (view : Contract.BaseView?, interactor: Interactor) : Contract.B
         mView = null
     }
 
-    fun onItemClick(adapterPosition: Int) {
-//        mView?.onItemClick(adapterPosition) TODO
-    }
+//    fun onItemClick(adapterPosition: Int) {
+////        mView?.onItemClick(adapterPosition) TODO
+//    }
 }
